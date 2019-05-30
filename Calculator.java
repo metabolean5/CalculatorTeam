@@ -68,18 +68,17 @@ public class Calculator {
 
 		//System.out.println("\nRemaining Fraction:" + decimal + "/" + denominator);
 
-		float nextPart = 1;
 
 		double nRoot = FindNthRoot(10, denominator);
+		
+		float nextPart = (float) Power(nRoot, decimal);
 
 		//System.out.println("\nnRoot: " + nRoot);
 
 		//nextPart = nRoot;
 
 		//System.out.println("Decimal: " + decimal);
-
-		for (int i = 0; i < decimal; i++)
-			nextPart *= nRoot;
+		
 
 		//System.out.println("nextPart: " + nextPart);
 
