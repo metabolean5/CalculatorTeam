@@ -89,8 +89,31 @@ public class Calculator {
 
 		return  result;
 	}
+	public static double cosh(double x){
+		
+		if (x == 0){
+			return 1;
+		}	
+		double total = 1;
+		for(int i = 1; i < 150; i++){
+			total = total + Power(x, (2*i))/Fact((2*i));
+		}
+		return total;
+	}
 
-	public double Power(double base, int expo) {
+	public static double Fact(int val){
+		if (val == 0){
+			return 1;
+		}
+		else{
+			double total = 1;
+			for(int i = 0; i < val; i++){
+				total = total * (val - i);
+			}
+			return total;
+		}
+	}
+	public static double Power(double base, int expo) {
 
 		if(expo == 0)
 			return 1;
