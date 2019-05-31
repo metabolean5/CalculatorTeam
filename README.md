@@ -11,3 +11,6 @@
   
   
   1.3  Added cosh and factorials
+  
+
+  1.4  Added square root
