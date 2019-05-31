@@ -146,6 +146,30 @@ public class Calculator {
 	}
 
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	
+	// Square root (x^(1/2))
+	
+	public double sqrt(double number) {
+		if (number<0){ // Check that value is nonnegative
+			throw new IllegalArgumentException("Number must be greater than zero."); // TODO handle better
+		}
+		if (number == 0){ // If passed number is 0, return value 0
+			return number;
+		}
+		
+		double t;
+	 
+		double squareRoot = number;
+	 
+		// Do guesses using Newthon's method until t is equal to squareRoot
+		do {
+			t = squareRoot;
+			squareRoot = ((number / t + t)) / 2;
+		} while ((t - squareRoot) != 0); 
+	 
+		return squareRoot;
+	}
+
 
 
 
