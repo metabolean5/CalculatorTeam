@@ -47,5 +47,11 @@ public class Driver {
 			dif = -dif;
 		return (dif > prec);
 	}
+	
+		System.out.println("\n4^(1/2) = " + calculator.sqrt(4));
+		System.out.println("1005^(1/2) = " + calculator.sqrt(1005));
+		System.out.println("(5)^(1/2) = " + calculator.sqrt(55));
+		System.out.println("0.01^(1/2) = " + calculator.sqrt(0.01));
+		//System.out.println("(-2)^(1/2) = " + calculator.sqrt(-2)); // Negative value not accepted, throws an exception
 
 }
