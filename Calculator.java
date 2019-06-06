@@ -18,7 +18,7 @@ public class Calculator {
 	}
 
 	//	10^x	
-	public float TenPower(float n){
+	public static float TenPower(float n){
 
 		float result = 1;
 
@@ -168,7 +168,7 @@ public class Calculator {
 	}
 	
 	//N Root
-	private double FindNthRoot(double base, int expo) {
+	private static double FindNthRoot(double base, int expo) {
 
 		double x = 1;
 		boolean accurate = false;
@@ -182,7 +182,7 @@ public class Calculator {
 		return x;
 	}
 
-	private boolean Accuracy(double x, double y) {
+	private static boolean Accuracy(double x, double y) {
 
 		double result = y - x;
 

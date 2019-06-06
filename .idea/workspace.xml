@@ -11,20 +11,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Driver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="33" column="40" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
+            <state relative-caret-position="408">
+              <caret line="24" column="42" selection-start-line="24" selection-start-column="42" selection-end-line="24" selection-end-column="42" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="19" lean-forward="true" selection-start-column="19" selection-end-column="19" />
+            <state relative-caret-position="102">
+              <caret line="6" column="68" selection-start-line="6" selection-start-column="68" selection-end-line="6" selection-end-column="68" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Calculator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="20" column="32" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -43,6 +52,7 @@
       <find>for</find>
       <find>func</find>
       <find>cosh</find>
+      <find>tenpower</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -51,9 +61,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Calculator.java" />
         <option value="$PROJECT_DIR$/sineX.java" />
+        <option value="$PROJECT_DIR$/Calculator.java" />
         <option value="$PROJECT_DIR$/Driver.java" />
+        <option value="$PROJECT_DIR$/Test.java" />
       </list>
     </option>
   </component>
@@ -133,16 +144,17 @@
       <workItem from="1559228990346" duration="12359000" />
       <workItem from="1559596639689" duration="592000" />
       <workItem from="1559844674562" duration="28000" />
+      <workItem from="1559844861878" duration="1081000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12979000" />
+    <option name="totallyTimeSpent" value="14060000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13235295" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13314785" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -196,29 +208,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/sineX.java" />
     <entry file="file://$PROJECT_DIR$/Calculator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="91" column="29" selection-start-line="91" selection-start-column="25" selection-end-line="91" selection-end-column="29" />
-          <folding>
-            <element signature="e#4546#4547#0" expanded="true" />
-            <element signature="e#4590#4591#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sineX.java" />
-    <entry file="file://$PROJECT_DIR$/Driver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="33" column="40" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
+        <state relative-caret-position="340">
+          <caret line="20" column="32" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="19" lean-forward="true" selection-start-column="19" selection-end-column="19" />
+        <state relative-caret-position="102">
+          <caret line="6" column="68" selection-start-line="6" selection-start-column="68" selection-end-line="6" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Driver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="42" selection-start-line="24" selection-start-column="42" selection-end-line="24" selection-end-column="42" />
         </state>
       </provider>
     </entry>
