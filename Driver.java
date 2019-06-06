@@ -11,12 +11,11 @@ public class Driver {
 		
 		
 		
-		printTestCases();
+		//printTestCases();
 		
 		ConsoleApplication cApp = new ConsoleApplication();
 		
 		cApp.run();
-		
 
 		
 		

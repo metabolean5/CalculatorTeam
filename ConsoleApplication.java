@@ -2,6 +2,8 @@ import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+
+
 public class ConsoleApplication {
 	
 	
@@ -56,7 +58,8 @@ public class ConsoleApplication {
         	double result = Double.parseDouble(num);
         	return (float) calculator.Cosh(result);
         case "10":
-        	return Calculator.TenPower(Float.parseFloat(num));
+        	String parts[] = str.split("\\^");
+        	return Calculator.TenPower(Float.parseFloat(parts[1]));
         case "sq":
         	double res = Double.parseDouble(num);
         	return (float) calculator.Sqrt(res);
