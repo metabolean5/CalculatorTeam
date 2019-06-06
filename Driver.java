@@ -1,9 +1,17 @@
 import java.lang.Math;
 public class Driver {
 
+<<<<<<< HEAD
 
 	
 	
+=======
+	/**
+	 * @param args
+	 */
+
+
+>>>>>>> f316e4479db407204411a6089a790bcd896dd9e5
 	public static void main(String[] args) {
 		
 		
@@ -32,28 +40,31 @@ public class Driver {
 		Calculator calculator = new Calculator();
 		
 		System.out.println("*** e^x ***" );
-		System.out.println("e^1.44 = " + calculator.exponent(10, (float) 1.44) );
+		System.out.println("e^1.44 = " + calculator.Exponent(10, (float) 1.44) );
 
 		System.out.println("\n*** 10^x ***");
-		System.out.println("10^0 = " + calculator.TenPower(0f));
-		System.out.println("10^1.51 = " + calculator.TenPower(1.51f));
-		System.out.println("10^3.75 = " + calculator.TenPower(3.75f));
-		System.out.println("10^2 = " + calculator.TenPower(2f));
-		System.out.println("10^10 = " + calculator.TenPower(10f));
-		System.out.println("10^-3 = " + calculator.TenPower(-3f));
-		System.out.println("10^-9.99 = " + calculator.TenPower(-9.99f));
-		System.out.println("10^-25.3 = " + calculator.TenPower(-25.3f));
-		System.out.println("10^-999.99 = " + calculator.TenPower(-999.99f));	//Too small so shows 0.0
-		System.out.println("10^999.99 = " + calculator.TenPower(999.99f));	//Too big so shows inf
-		System.out.println("10^-0 = " + calculator.TenPower(-0f));
+		System.out.println("Test 10^0 = " + Test.CheckTenPower(0f) );
+		System.out.println("Test 10^5 = " + Test.CheckTenPower(5f) );
+		System.out.println("Test 10^-5 = " + Test.CheckTenPower(-5f) );
+		System.out.println("Test 10^0.5 = " + Test.CheckTenPower(0.5f) );
+		System.out.println("Test 10^-999.99 = " + Test.CheckTenPower(-999.99f) );
+		System.out.println("Test 10^999.99 = " + Test.CheckTenPower(999.99f) );
+		System.out.println("Test 10^-25.3 = " + Test.CheckTenPower(-25.3f) );
+		System.out.println("Test 10^1.51 = " + Test.CheckTenPower(1.51f) );
+		System.out.println("Test 10^1.1111 = " + Test.CheckTenPower(1.1111f) );
+
 		
 		Boolean coshtest = true;
 		int testCount = 10000;
-		if(calculator.cosh(0) != 1)
+		if(calculator.Cosh(0) != 1)
 			coshtest = false;
 		for(int i = 0; i < testCount; i++){
 			double x = 10000 - 20000*Math.random();
+<<<<<<< HEAD
 			double hcosh = calculator.cosh(x);
+=======
+			double hcosh = Calculator.Cosh(x);
+>>>>>>> f316e4479db407204411a6089a790bcd896dd9e5
 			double fcosh = Math.cosh(x);
 			
 			if(checkPrecision(hcosh, fcosh)){
@@ -64,18 +75,18 @@ public class Driver {
 		}
 		System.out.println("Cosh function with a precision of 10^-10 has passed the test: " + coshtest);
 
-		System.out.println(calculator.positiveExpPower(2, 3));
-		System.out.println(calculator.factorial(4));
-		System.out.println(calculator.sine(-150));
+		System.out.println(calculator.Power(2, 3));
+		System.out.println(calculator.Fact(4));
+		System.out.println(calculator.Sine(-150));
 		//System.out.println(calculator.getPi());
 		//System.out.println(calculator.PICONST);
-		System.out.println(calculator.degToRad(720));
+		System.out.println(calculator.DegToRad(720));
 		//System.out.println((9%(2.0*calculator.PICONST)));
 
-		System.out.println("\n4^(1/2) = " + calculator.sqrt(4));
-		System.out.println("1005^(1/2) = " + calculator.sqrt(1005));
-		System.out.println("(5)^(1/2) = " + calculator.sqrt(55));
-		System.out.println("0.01^(1/2) = " + calculator.sqrt(0.01));
+		System.out.println("\n4^(1/2) = " + calculator.Sqrt(4));
+		System.out.println("1005^(1/2) = " + calculator.Sqrt(1005));
+		System.out.println("(5)^(1/2) = " + calculator.Sqrt(55));
+		System.out.println("0.01^(1/2) = " + calculator.Sqrt(0.01));
 		//System.out.println("(-2)^(1/2) = " + calculator.sqrt(-2)); // Negative value not accepted, throws an exception
 		
 		
