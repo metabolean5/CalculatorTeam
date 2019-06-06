@@ -75,11 +75,11 @@ public class Driver {
 		System.out.println(calculator.DegToRad(720));
 		//System.out.println((9%(2.0*calculator.PICONST)));
 
-		System.out.println("\n4^(1/2) = " + calculator.Sqrt(4));
-		System.out.println("1005^(1/2) = " + calculator.Sqrt(1005));
-		System.out.println("(5)^(1/2) = " + calculator.Sqrt(55));
-		System.out.println("0.01^(1/2) = " + calculator.Sqrt(0.01));
-		//System.out.println("(-2)^(1/2) = " + calculator.sqrt(-2)); // Negative value not accepted, throws an exception
+		System.out.println("\n4^(1/2) = " + checkSqrt(calculator, 4));
+		System.out.println("1005^(1/2) = " + checkSqrt(calculator, 10053));
+		System.out.println("(5)^(1/2) = " + checkSqrt(calculator, 0.00001));
+		System.out.println("0.01^(1/2) = " + checkSqrt(calculator, 29980983));
+		//System.out.println("(-2)^(1/2) = " + checkSqrt(calculator, -4)); // Negative value not accepted, causes an error
 		
 		
 	}
@@ -93,6 +93,17 @@ public class Driver {
 		return (dif > prec);
 	}
 	
+	public static boolean checkSqrt(Calculator c, double sqrtval){
+	    double x = c.sqrt(sqrtval);
+        double y = Math.sqrt(sqrtval);
+
+        System.out.println("Result for Calculator.sqrt: " + x);
+        System.out.println("Result for Math.sqrt: " + y);
+
+        if (x == y)
+            return true;
+        return false;
+    }
 
 
 }
