@@ -5,13 +5,10 @@ public class Calculator {
 
 //-------------- MAIN FUNCTIONS ----------------
 	
-<<<<<<< HEAD
-	// Exponent (e^x) //////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	public float exponent(int n, float x){
-=======
+
 	// Exponent (e^x)
 	public float Exponent(int n, float x){
->>>>>>> f316e4479db407204411a6089a790bcd896dd9e5
+
 			
 		float result = 1;
 		
@@ -95,19 +92,15 @@ public class Calculator {
 
 		return  result;
 	}
-<<<<<<< HEAD
-	
-	
+
 	
 	//	cosh(x)	//////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	
-	public double cosh(double x){
-		
-=======
+
 	//cosh(x)
 	public static double Cosh(double x){
 		//Known integer value of cosh
->>>>>>> f316e4479db407204411a6089a790bcd896dd9e5
+
 		if (x == 0){
 			return 1;
 		}	
@@ -121,10 +114,10 @@ public class Calculator {
 		return total;
 	}
 	
-<<<<<<< HEAD
-	//	Factorial (x)	//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
 	
-=======
+
 	// Square root of x (x^(1/2))
 	
 	public double Sqrt(double number) {
@@ -165,7 +158,7 @@ public class Calculator {
 	}
 //-------------- SECONDARY FUNCTIONS ----------------
 	//Factorial
->>>>>>> f316e4479db407204411a6089a790bcd896dd9e5
+
 	public static double Fact(int val){
 		if (val == 0){
 			return 1;
@@ -178,11 +171,9 @@ public class Calculator {
 			return total;
 		}
 	}
-<<<<<<< HEAD
-	
-=======
+
 	//Power with positive integer exponent 
->>>>>>> f316e4479db407204411a6089a790bcd896dd9e5
+
 	public static double Power(double base, int expo) {
 
 		if(expo == 0)
@@ -216,11 +207,9 @@ public class Calculator {
 		return result < 0.000001;
 	}
 
-	
-<<<<<<< HEAD
+
 	// Square root (x^(1/2)) //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-=======
->>>>>>> f316e4479db407204411a6089a790bcd896dd9e5
+
 	
 
 

@@ -1,28 +1,23 @@
 import java.lang.Math;
 public class Driver {
 
-<<<<<<< HEAD
 
-	
-	
-=======
 	/**
 	 * @param args
 	 */
 
 
->>>>>>> f316e4479db407204411a6089a790bcd896dd9e5
 	public static void main(String[] args) {
 		
 		
 		
-		//printTestCases();
+		printTestCases();
 		
 		ConsoleApplication cApp = new ConsoleApplication();
 		
 		cApp.run();
 		
-		
+
 		
 		
 	
@@ -60,11 +55,9 @@ public class Driver {
 			coshtest = false;
 		for(int i = 0; i < testCount; i++){
 			double x = 10000 - 20000*Math.random();
-<<<<<<< HEAD
-			double hcosh = calculator.cosh(x);
-=======
-			double hcosh = Calculator.Cosh(x);
->>>>>>> f316e4479db407204411a6089a790bcd896dd9e5
+
+			double hcosh = calculator.Cosh(x);
+
 			double fcosh = Math.cosh(x);
 			
 			if(checkPrecision(hcosh, fcosh)){

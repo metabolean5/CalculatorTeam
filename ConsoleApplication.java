@@ -51,15 +51,15 @@ public class ConsoleApplication {
 		
 		switch (func) {
         case "e^":
-        	return calculator.exponent(10, Float.parseFloat(num));
+        	return calculator.Exponent(10, Float.parseFloat(num));
         case "co":
         	double result = Double.parseDouble(num);
-        	return (float) calculator.cosh(result);
+        	return (float) calculator.Cosh(result);
         case "10":
-        	return calculator.TenPower(Float.parseFloat(num));
+        	return Calculator.TenPower(Float.parseFloat(num));
         case "sq":
         	double res = Double.parseDouble(num);
-        	return (float) calculator.sqrt(res);
+        	return (float) calculator.Sqrt(res);
         case "exit":
         	System.exit(0);
         default:
