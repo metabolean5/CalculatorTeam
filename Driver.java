@@ -1,11 +1,34 @@
 import java.lang.Math;
 public class Driver {
 
-	/**
-	 * @param args
-	 */
-	public static void main(String[] args) {
+
 	
+	
+	public static void main(String[] args) {
+		
+		
+		
+		//printTestCases();
+		
+		ConsoleApplication cApp = new ConsoleApplication();
+		
+		cApp.run();
+		
+		
+		
+		
+	
+		
+	}
+	
+	
+	
+	
+	//********* FREE FUNCTIONS **********
+	
+	
+	public static void printTestCases() {
+		
 		Calculator calculator = new Calculator();
 		
 		System.out.println("*** e^x ***" );
@@ -30,7 +53,7 @@ public class Driver {
 			coshtest = false;
 		for(int i = 0; i < testCount; i++){
 			double x = 10000 - 20000*Math.random();
-			double hcosh = Calculator.cosh(x);
+			double hcosh = calculator.cosh(x);
 			double fcosh = Math.cosh(x);
 			
 			if(checkPrecision(hcosh, fcosh)){
@@ -54,8 +77,11 @@ public class Driver {
 		System.out.println("(5)^(1/2) = " + calculator.sqrt(55));
 		System.out.println("0.01^(1/2) = " + calculator.sqrt(0.01));
 		//System.out.println("(-2)^(1/2) = " + calculator.sqrt(-2)); // Negative value not accepted, throws an exception
-
+		
+		
 	}
+	
+	
 	public static Boolean checkPrecision(double hcosh, double fcosh){
 		double prec = 10E-10;
 		double dif = hcosh - fcosh;

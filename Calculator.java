@@ -4,7 +4,7 @@ public class Calculator {
 
 //-------------- FUNCTIONS ----------------
 	
-	// Exponent (e^x)
+	// Exponent (e^x) //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	public float exponent(int n, float x){
 			
 		float result = 1;
@@ -89,7 +89,12 @@ public class Calculator {
 
 		return  result;
 	}
-	public static double cosh(double x){
+	
+	
+	
+	//	cosh(x)	//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	
+	public double cosh(double x){
 		
 		if (x == 0){
 			return 1;
@@ -100,7 +105,9 @@ public class Calculator {
 		}
 		return total;
 	}
-
+	
+	//	Factorial (x)	//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	
 	public static double Fact(int val){
 		if (val == 0){
 			return 1;
@@ -113,6 +120,7 @@ public class Calculator {
 			return total;
 		}
 	}
+	
 	public static double Power(double base, int expo) {
 
 		if(expo == 0)
@@ -145,9 +153,8 @@ public class Calculator {
 		return result < 0.000001;
 	}
 
-	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	
-	// Square root (x^(1/2))
+	// Square root (x^(1/2)) //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	
 	public double sqrt(double number) {
 		if (number<0){ // Check that value is nonnegative
