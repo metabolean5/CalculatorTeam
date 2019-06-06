@@ -26,14 +26,14 @@ public class Driver {
 		
 		Boolean coshtest = true;
 		int testCount = 10000;
-		if(calculator.Cosh(0) != 1)
+		if(Calculator.Cosh(0) != 1)
 			coshtest = false;
 		for(int i = 0; i < testCount; i++){
 			double x = 10000 - 20000*Math.random();
 			double hcosh = Calculator.Cosh(x);
 			double fcosh = Math.cosh(x);
 			
-			if(checkPrecision(hcosh, fcosh)){
+			if(CheckPrecision(hcosh, fcosh)){
 				coshtest = false;
 				System.out.println("Cosh Fail: " + x + " / " 
 						+ Double.toString(hcosh) + " != " + Double.toString(fcosh)); 
@@ -41,22 +41,22 @@ public class Driver {
 		}
 		System.out.println("Cosh function with a precision of 10^-10 has passed the test: " + coshtest);
 
-		System.out.println(calculator.Power(2, 3));
-		System.out.println(calculator.Fact(4));
-		System.out.println(calculator.Sine(-150));
+		System.out.println(Calculator.Power(2, 3));
+		System.out.println(Calculator.Fact(4));
+		System.out.println(Calculator.Sine(-150));
 		//System.out.println(calculator.getPi());
 		//System.out.println(calculator.PICONST);
-		System.out.println(calculator.DegToRad(720));
+		System.out.println(Calculator.DegToRad(720));
 		//System.out.println((9%(2.0*calculator.PICONST)));
 
-		System.out.println("\n4^(1/2) = " + calculator.Sqrt(4));
-		System.out.println("1005^(1/2) = " + calculator.Sqrt(1005));
-		System.out.println("(5)^(1/2) = " + calculator.Sqrt(55));
-		System.out.println("0.01^(1/2) = " + calculator.Sqrt(0.01));
+		System.out.println("\n4^(1/2) = " + Calculator.Sqrt(4));
+		System.out.println("1005^(1/2) = " + Calculator.Sqrt(1005));
+		System.out.println("(5)^(1/2) = " + Calculator.Sqrt(55));
+		System.out.println("0.01^(1/2) = " + Calculator.Sqrt(0.01));
 		//System.out.println("(-2)^(1/2) = " + calculator.sqrt(-2)); // Negative value not accepted, throws an exception
 
 	}
-	public static Boolean checkPrecision(double hcosh, double fcosh){
+	public static Boolean CheckPrecision(double hcosh, double fcosh){
 		double prec = 10E-10;
 		double dif = hcosh - fcosh;
 		if(dif < 0)
