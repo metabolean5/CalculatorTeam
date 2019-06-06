@@ -8,6 +8,7 @@ public class Driver {
 	
 		Calculator calculator = new Calculator();
 		
+		System.out.println("*** e^x ***" );
 		System.out.println("e^1.44 = " + calculator.exponent(10, (float) 1.44) );
 
 		System.out.println("\n*** 10^x ***");
