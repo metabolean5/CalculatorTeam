@@ -9,7 +9,7 @@ public class Driver {
 		Calculator calculator = new Calculator();
 		
 		System.out.println("*** e^x ***" );
-		System.out.println("e^1.44 = " + calculator.exponent(10, (float) 1.44) );
+		System.out.println("e^1.44 = " + calculator.Exponent(10, (float) 1.44) );
 
 		System.out.println("\n*** 10^x ***");
 		System.out.println("10^0 = " + calculator.TenPower(0f));
@@ -26,11 +26,11 @@ public class Driver {
 		
 		Boolean coshtest = true;
 		int testCount = 10000;
-		if(calculator.cosh(0) != 1)
+		if(calculator.Cosh(0) != 1)
 			coshtest = false;
 		for(int i = 0; i < testCount; i++){
 			double x = 10000 - 20000*Math.random();
-			double hcosh = Calculator.cosh(x);
+			double hcosh = Calculator.Cosh(x);
 			double fcosh = Math.cosh(x);
 			
 			if(checkPrecision(hcosh, fcosh)){
@@ -41,18 +41,18 @@ public class Driver {
 		}
 		System.out.println("Cosh function with a precision of 10^-10 has passed the test: " + coshtest);
 
-		System.out.println(calculator.positiveExpPower(2, 3));
-		System.out.println(calculator.factorial(4));
-		System.out.println(calculator.sine(-150));
+		System.out.println(calculator.Power(2, 3));
+		System.out.println(calculator.Fact(4));
+		System.out.println(calculator.Sine(-150));
 		//System.out.println(calculator.getPi());
 		//System.out.println(calculator.PICONST);
-		System.out.println(calculator.degToRad(720));
+		System.out.println(calculator.DegToRad(720));
 		//System.out.println((9%(2.0*calculator.PICONST)));
 
-		System.out.println("\n4^(1/2) = " + calculator.sqrt(4));
-		System.out.println("1005^(1/2) = " + calculator.sqrt(1005));
-		System.out.println("(5)^(1/2) = " + calculator.sqrt(55));
-		System.out.println("0.01^(1/2) = " + calculator.sqrt(0.01));
+		System.out.println("\n4^(1/2) = " + calculator.Sqrt(4));
+		System.out.println("1005^(1/2) = " + calculator.Sqrt(1005));
+		System.out.println("(5)^(1/2) = " + calculator.Sqrt(55));
+		System.out.println("0.01^(1/2) = " + calculator.Sqrt(0.01));
 		//System.out.println("(-2)^(1/2) = " + calculator.sqrt(-2)); // Negative value not accepted, throws an exception
 
 	}

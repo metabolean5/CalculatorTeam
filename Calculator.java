@@ -5,7 +5,7 @@ public class Calculator {
 //-------------- FUNCTIONS ----------------
 	
 	// Exponent (e^x)
-	public float exponent(int n, float x){
+	public float Exponent(int n, float x){
 			
 		float result = 1;
 		
@@ -89,7 +89,7 @@ public class Calculator {
 
 		return  result;
 	}
-	public static double cosh(double x){
+	public static double Cosh(double x){
 		
 		if (x == 0){
 			return 1;
@@ -149,7 +149,7 @@ public class Calculator {
 	
 	// Square root (x^(1/2))
 	
-	public double sqrt(double number) {
+	public double Sqrt(double number) {
 		if (number<0){ // Check that value is nonnegative
 			throw new IllegalArgumentException("Number must be greater than zero."); // TODO handle better
 		}
@@ -174,31 +174,16 @@ public class Calculator {
 	//SineX
 	final static double PICONST = 3.141592653589793238462643383279502884197169399375105820974944592307816406286;
 
-	public static double positiveExpPower(double base, double exp){
-		double result = base;
-		for(int i = 1; i < exp; i++){
-			result *= base;
-		}
-		return result;
-	}
-
-	public static double factorial(double inp){
-		double result = 1;
-		for(double start = inp; start >= 1; start--){
-			result *= start;
-		}
-		return result;
-	}
 
 	//radian calculation
-	public static double sine(double inp){
+	public static double Sine(double inp){
 
 		double inpMod = inp % (2.0*PICONST);
 		double result = inpMod;
 
 		for(int j = 3; j < 150; j+=4){
-			result -= (positiveExpPower(inpMod, j)/factorial(j));
-			result += (positiveExpPower(inpMod, j+2)/factorial(j+2));
+			result -= (Power(inpMod, j)/Fact(j));
+			result += (Power(inpMod, j+2)/Fact(j+2));
 		}
 
 		return result;
@@ -216,7 +201,7 @@ public class Calculator {
     }
     */
 
-	public static double degToRad(double inp){
+	public static double DegToRad(double inp){
 		return inp * PICONST / 180.0;
 	}
 
