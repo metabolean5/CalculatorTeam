@@ -1,8 +1,9 @@
 
 public class Calculator {
+//-------------- CONSTANTS ----------------
+	final static double PICONST = 3.141592653589793238462643383279502884197169399375105820974944592307816406286;
 
-
-//-------------- FUNCTIONS ----------------
+//-------------- MAIN FUNCTIONS ----------------
 	
 	// Exponent (e^x)
 	public float Exponent(int n, float x){
@@ -16,7 +17,7 @@ public class Calculator {
 		return result;
 	}
 
-	//	10^x	//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	//	10^x	
 	public float TenPower(float n){
 
 		float result = 1;
@@ -89,18 +90,62 @@ public class Calculator {
 
 		return  result;
 	}
+	//cosh(x)
 	public static double Cosh(double x){
-		
+		//Known integer value of cosh
 		if (x == 0){
 			return 1;
 		}	
+		//Taylor series ((x^2n)/(2n)!) summation from n = 0 to 149 
+		//n = 0
 		double total = 1;
+		//n = 1 to 149 
 		for(int i = 1; i < 150; i++){
 			total = total + Power(x, (2*i))/Fact((2*i));
 		}
 		return total;
 	}
+	
+	// Square root of x (x^(1/2))
+	
+	public double Sqrt(double number) {
+		if (number<0){ // Check that value is nonnegative
+			throw new IllegalArgumentException("Number must be greater than zero."); // TODO handle better
+		}
+		if (number == 0){ // If passed number is 0, return value 0
+			return number;
+		}
+		
+		double t;
+		 
+		double squareRoot = number;
+		 
+		// Do guesses using Newthon's method until t is equal to squareRoot
+		do {
+			t = squareRoot;
+			squareRoot = ((number / t + t)) / 2;
+		} while ((t - squareRoot) != 0); 
+		 
+		return squareRoot;
+	}
+		
+	//Sin(x)
+	
+	//Using rads
+	public static double Sine(double inp){
 
+		double inpMod = inp % (2.0*PICONST);
+		double result = inpMod;
+
+		for(int j = 3; j < 150; j+=4){
+			result -= (Power(inpMod, j)/Fact(j));
+			result += (Power(inpMod, j+2)/Fact(j+2));
+		}
+
+		return result;
+	}
+//-------------- SECONDARY FUNCTIONS ----------------
+	//Factorial
 	public static double Fact(int val){
 		if (val == 0){
 			return 1;
@@ -113,6 +158,7 @@ public class Calculator {
 			return total;
 		}
 	}
+	//Power with positive integer exponent 
 	public static double Power(double base, int expo) {
 
 		if(expo == 0)
@@ -120,7 +166,8 @@ public class Calculator {
 
 		return base * Power(base, expo-1);
 	}
-
+	
+	//N Root
 	private double FindNthRoot(double base, int expo) {
 
 		double x = 1;
@@ -147,47 +194,13 @@ public class Calculator {
 
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	
-	// Square root (x^(1/2))
 	
-	public double Sqrt(double number) {
-		if (number<0){ // Check that value is nonnegative
-			throw new IllegalArgumentException("Number must be greater than zero."); // TODO handle better
-		}
-		if (number == 0){ // If passed number is 0, return value 0
-			return number;
-		}
-		
-		double t;
-	 
-		double squareRoot = number;
-	 
-		// Do guesses using Newthon's method until t is equal to squareRoot
-		do {
-			t = squareRoot;
-			squareRoot = ((number / t + t)) / 2;
-		} while ((t - squareRoot) != 0); 
-	 
-		return squareRoot;
-	}
 
 
-	//SineX
-	final static double PICONST = 3.141592653589793238462643383279502884197169399375105820974944592307816406286;
+	
 
 
-	//radian calculation
-	public static double Sine(double inp){
-
-		double inpMod = inp % (2.0*PICONST);
-		double result = inpMod;
-
-		for(int j = 3; j < 150; j+=4){
-			result -= (Power(inpMod, j)/Fact(j));
-			result += (Power(inpMod, j+2)/Fact(j+2));
-		}
-
-		return result;
-	}
+	
 
 	//getting pi somewhat accurate took a very long time
     /*
