@@ -15,7 +15,7 @@ public class ConsoleApplication {
 		Scanner scan = new Scanner(System.in);
 
 		
-		System.out.println("POSSIBLE FUNCTIONS: \n\n -e^x \t -coshx \n\n -sqrtx \t -10^x\n\n " );
+		System.out.println("POSSIBLE FUNCTIONS: \n\n -e^x \t -coshx \n\n -sqrtx \t -10^x\n\n -sinx \n\n " );
 		
 		while(!exit) {
 		
@@ -64,8 +64,8 @@ public class ConsoleApplication {
         	double res = Double.parseDouble(num);
         	return (float) calculator.Sqrt(res);
         case "si":
-        	double res = Double.parseDouble(num);
-        	return (float) calculator.Sine(res);
+        	double res1 = Double.parseDouble(num);
+        	return (float) calculator.Sine(res1);
         case "exit":
         	System.exit(0);
         default:

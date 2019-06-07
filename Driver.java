@@ -100,7 +100,7 @@ public class Driver {
 	}
 	
 	public static boolean checkSqrt(Calculator c, double sqrtval){
-	    double x = c.sqrt(sqrtval);
+	    double x = c.Sqrt(sqrtval);
         double y = Math.sqrt(sqrtval);
 
         System.out.println("Result for Calculator.sqrt: " + x);
