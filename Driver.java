@@ -67,13 +67,19 @@ public class Driver {
 		}
 		System.out.println("Cosh function with a precision of 10^-10 has passed the test: " + coshtest);
 
-		System.out.println(calculator.Power(2, 3));
-		System.out.println(calculator.Fact(4));
-		System.out.println(calculator.Sine(-150));
+		//System.out.println(calculator.Power(2, 3));
+		//System.out.println(calculator.Fact(4));
+		System.out.println("Test sin(-15) = " + calculator.Sine(-15));
+		System.out.println("Test sin(0) = " + calculator.Sine(0));
+		System.out.println("Test sin(-17300) = " + calculator.Sine(-17300));
+		System.out.println("Test sin(38000) = " + calculator.Sine(38000));
+		System.out.println("Test sin(12) = " + calculator.Sine(12));
 		//System.out.println(calculator.getPi());
 		//System.out.println(calculator.PICONST);
-		System.out.println(calculator.DegToRad(720));
-		//System.out.println((9%(2.0*calculator.PICONST)));
+		System.out.println("Test Degree to Radian DegToRad(720) = " + calculator.DegToRad(720));
+		System.out.println("Test Degree to Radian DegToRad(180) = " + calculator.DegToRad(180));
+		System.out.println("Test Degree to Radian DegToRad(-18000) = " + calculator.DegToRad(-18000));
+		System.out.println("Test Degree to Radian DegToRad(0) = " + calculator.DegToRad(0));
 
 		System.out.println("\n4^(1/2) = " + checkSqrt(calculator, 4));
 		System.out.println("1005^(1/2) = " + checkSqrt(calculator, 10053));
