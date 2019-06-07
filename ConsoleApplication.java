@@ -63,6 +63,9 @@ public class ConsoleApplication {
         case "sq":
         	double res = Double.parseDouble(num);
         	return (float) calculator.Sqrt(res);
+        case "si":
+        	double res = Double.parseDouble(num);
+        	return (float) calculator.Sine(res);
         case "exit":
         	System.exit(0);
         default:
