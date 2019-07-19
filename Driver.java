@@ -1,4 +1,5 @@
 import java.lang.Math;
+import java.util.ArrayList;
 public class Driver {
 
 
@@ -9,19 +10,15 @@ public class Driver {
 
 	public static void main(String[] args) {
 		
-		
+	
+
+
 		
 		//printTestCases();
 		
 		ConsoleApplication cApp = new ConsoleApplication();
 		
-		cApp.run();
-
-		System.out.println("testing da push" );
-		
-		
-	
-		
+		cApp.run();	
 	}
 	
 	

@@ -7,7 +7,7 @@ public class Calculator {
 	
 
 	// Exponent (e^x)
-	public float Exponent(int n, float x){
+	public static float Exponent(int n, float x){
 
 			
 		float result = 1;
@@ -120,7 +120,7 @@ public class Calculator {
 
 	// Square root of x (x^(1/2))
 	
-	public double Sqrt(double number) {
+	public static double Sqrt(double number) {
 		if (number<0){ // Check that value is nonnegative
 			throw new IllegalArgumentException("Number must be greater than zero."); // TODO handle better
 		}
