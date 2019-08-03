@@ -5,7 +5,7 @@
  * 
  * August 3, 2019 
  * 
- * Copyright © 2019 Sabrina Kim, Martial Pastor, Keven Presseau-St-Laurent, Marco Tropiano, Diana Zitting-Rioux. 
+ * Copyright Â© 2019 Sabrina Kim, Martial Pastor, Keven Presseau-St-Laurent, Marco Tropiano, Diana Zitting-Rioux. 
  * All rights reserved.
  */
 
@@ -18,14 +18,7 @@
  */
 
 public class Calculator {
-<<<<<<< Updated upstream
 
-
-//-------------- FUNCTIONS ----------------
-	
-	// Exponent (e^x)
-	public float exponent(int n, float x){
-=======
 /**
  * Constants
  */
@@ -40,7 +33,6 @@ public class Calculator {
 	 * @return result
 	 */
 	public static float calculateExponent(int n, float x){
->>>>>>> Stashed changes
 			
 		float result = 1;
 		
@@ -51,17 +43,12 @@ public class Calculator {
 		return result;
 	}
 
-<<<<<<< Updated upstream
-	//	10^x	//////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	public float TenPower(float n){
-=======
 	/**
 	 * 10^x	
 	 * @param n
 	 * @return result
 	 */
 	public static float calculateTenPower(float n){
->>>>>>> Stashed changes
 
 		float result = 1;
 
@@ -113,7 +100,7 @@ public class Calculator {
 		//System.out.println("\nRemaining Fraction:" + decimal + "/" + denominator);
 
 
-		double nRoot = FindNthRoot(10, denominator);
+		double nRoot = findNthRoot(10, denominator);
 		
 		float nextPart = (float) calculatePower(nRoot, decimal);
 
@@ -133,10 +120,7 @@ public class Calculator {
 
 		return  result;
 	}
-<<<<<<< Updated upstream
-	public static double cosh(double x){
-		
-=======
+
 	
 
 	/**
@@ -147,7 +131,6 @@ public class Calculator {
 	public static double calculateCosh(double x){
 		//Known integer value of cosh
 
->>>>>>> Stashed changes
 		if (x == 0){
 			return 1;
 		}	
@@ -157,10 +140,6 @@ public class Calculator {
 		}
 		return total;
 	}
-<<<<<<< Updated upstream
-
-	public static double Fact(int val){
-=======
 	
 	/**
 	 * Square root of x (x^(1/2))
@@ -214,7 +193,6 @@ public class Calculator {
 	 * @return total
 	 */
 	public static double calculateFactorial(int val){
->>>>>>> Stashed changes
 		if (val == 0){
 			return 1;
 		}
@@ -226,9 +204,6 @@ public class Calculator {
 			return total;
 		}
 	}
-<<<<<<< Updated upstream
-	public static double Power(double base, int expo) {
-=======
 
 	/**
 	 * Power with positive integer exponent 
@@ -237,17 +212,11 @@ public class Calculator {
 	 * @return x
 	 */
 	public static double calculatePower(double base, int expo) {
->>>>>>> Stashed changes
-
 		if(expo == 0)
 			return 1;
 
 		return base * calculatePower(base, expo-1);
 	}
-<<<<<<< Updated upstream
-
-	private double FindNthRoot(double base, int expo) {
-=======
 	
 	/**
 	 * N root
@@ -255,9 +224,7 @@ public class Calculator {
 	 * @param expo
 	 * @return x
 	 */
-	private static double FindNthRoot(double base, int expo) {
->>>>>>> Stashed changes
-
+	private static double findNthRoot(double base, int expo) {
 		double x = 1;
 		boolean accurate = false;
 
@@ -270,9 +237,6 @@ public class Calculator {
 		return x;
 	}
 
-<<<<<<< Updated upstream
-	private boolean Accuracy(double x, double y) {
-=======
 	/**
 	 * Accuracy for n root
 	 * @param x
@@ -280,8 +244,6 @@ public class Calculator {
 	 * @return boolean result
 	 */
 	private static boolean isAccurate(double x, double y) {
->>>>>>> Stashed changes
-
 		double result = y - x;
 
 		if (result < 0)
@@ -290,9 +252,6 @@ public class Calculator {
 		return result < 0.000001;
 	}
 
-<<<<<<< Updated upstream
-	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	
 	// Square root (x^(1/2))
 	
 	public double sqrt(double number) {
@@ -314,7 +273,7 @@ public class Calculator {
 		} while ((t - squareRoot) != 0); 
 	 
 		return squareRoot;
-=======
+	}
 
 	//getting pi somewhat accurate took a very long time
     /*
@@ -328,9 +287,13 @@ public class Calculator {
     }
     */
 
+	/**
+	 * Deg to rad
+	 * @param inp
+	 * @return inp
+	 */
 	public static double DegToRad(double inp){
 		return inp * PICONST / 180.0;
->>>>>>> Stashed changes
 	}
 
 
