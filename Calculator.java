@@ -295,12 +295,4 @@ public class Calculator {
 	public static double DegToRad(double inp){
 		return inp * PICONST / 180.0;
 	}
-
-
-
-
-
-		
-	
-
 }
