@@ -99,4 +99,79 @@
 2[label = " neg(function) " ] 
  2--1 
 1[label = " 2(integer) " ] 
+ 2[label = " sqrt(function) " ] 
+ 2--1 
+1[label = " 9(integer) " ] 
+ 2[label = " exp(function) " ] 
+ 2--1 
+1[label = " 3(integer) " ] 
+ 2[label = " exp(function) " ] 
+ 2--1 
+1[label = " 3(integer) " ] 
+ 2[label = " sqrt(function) " ] 
+ 2--1 
+1[label = " 3(integer) " ] 
+ 2[label = " sin(function) " ] 
+ 2--1 
+1[label = " 3(integer) " ] 
+ 2[label = " pow(function) " ] 
+ 2--1 
+1[label = " 3(integer) " ] 
+ 2[label = " cosh(function) " ] 
+ 2--1 
+1[label = " 3(integer) " ] 
+ 3[label = " +(operator) " ] 
+ 3--2 
+3--1 
+2[label = " 1(integer) " ] 
+ 1[label = " 1(integer) " ] 
+ 3[label = " /(operator) " ] 
+ 3--2 
+3--1 
+2[label = " 1(integer) " ] 
+ 1[label = " 1(integer) " ] 
+ 3[label = " *(operator) " ] 
+ 3--2 
+3--1 
+2[label = " 2(integer) " ] 
+ 1[label = " 1(integer) " ] 
+ 3[label = " -(operator) " ] 
+ 3--2 
+3--1 
+2[label = " 1(integer) " ] 
+ 1[label = " 1(integer) " ] 
+ 3[label = " -(operator) " ] 
+ 3--2 
+3--1 
+2[label = " 1(integer) " ] 
+ 1[label = " 0(integer) " ] 
+ 3[label = " pow(function) " ] 
+ 3--2 
+2[label = " neg(function) " ] 
+ 2--1 
+1[label = " 1(integer) " ] 
+ 2[label = " pow(function) " ] 
+ 2--1 
+1[label = " 3(integer) " ] 
+ 3[label = " pow(function) " ] 
+ 3--2 
+2[label = " neg(function) " ] 
+ 2--1 
+1[label = " 3(integer) " ] 
+ 3[label = " pow(function) " ] 
+ 3--2 
+2[label = " neg(function) " ] 
+ 2--1 
+1[label = " 2(integer) " ] 
+ 3[label = " pow(function) " ] 
+ 3--2 
+2[label = " neg(function) " ] 
+ 2--1 
+1[label = " 1(integer) " ] 
+ 2[label = " sin(function) " ] 
+ 2--1 
+1[label = " 3(integer) " ] 
+ 2[label = " sqrt(function) " ] 
+ 2--1 
+1[label = " 9(integer) " ] 
  
