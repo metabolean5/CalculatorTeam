@@ -5,23 +5,12 @@
  * 
  * August 3, 2019 
  * 
- * Copyright © 2019 Sabrina Kim, Martial Pastor, Keven Presseau-St-Laurent, Marco Tropiano, Diana Zitting-Rioux. 
+ * Copyright Â© 2019 Sabrina Kim, Martial Pastor, Keven Presseau-St-Laurent, Marco Tropiano, Diana Zitting-Rioux. 
  * All rights reserved.
  */
 
 import java.lang.Math;
-public class Driver {
 
-<<<<<<< Updated upstream
-	/**
-	 * @param args
-	 */
-	public static void main(String[] args) {
-	
-		Calculator calculator = new Calculator();
-		
-		System.out.println("e^1.44 = " + calculator.exponent(10, (float) 1.44) );
-=======
 /**
  * Driver class for the calculator, runs the application and also can print the test cases
  * 
@@ -29,8 +18,9 @@ public class Driver {
  * @author Sabrina Kim, Martial Pastor, Keven Presseau-St-Laurent, Marco Tropiano, Diana Zitting-Rioux
  *
  */
+public class Driver {
+
 	public static void main(String[] args) {
-		
 		
 		//printTestCases();
 		
@@ -38,7 +28,7 @@ public class Driver {
 	}
 	
 	/**
-	 * Freen functions to print test cases
+	 * Free functions to print test cases
 	 */
 	public static void printTestCases() {
 		
@@ -57,7 +47,6 @@ public class Driver {
 		System.out.println("Test 10^-25.3 = " + Test.CheckTenPower(-25.3f) );
 		System.out.println("Test 10^1.51 = " + Test.CheckTenPower(1.51f) );
 		System.out.println("Test 10^1.1111 = " + Test.CheckTenPower(1.1111f) );
->>>>>>> Stashed changes
 
 		System.out.println("\n10^0 = " + calculator.TenPower(0f));
 		System.out.println("10^1.51 = " + calculator.TenPower(1.51f));
@@ -73,13 +62,6 @@ public class Driver {
 		
 		Boolean coshtest = true;
 		int testCount = 10000;
-<<<<<<< Updated upstream
-		if(func.cosh(0) != 1)
-			coshtest = false;
-		for(int i = 0; i < testCount; i++){
-			double x = 10000 - 20000*Math.random();
-			double hcosh = Calculator.cosh(x);
-=======
 		if(calculator.calculateCosh(0) != 1)
 			coshtest = false;
 		for(int i = 0; i < testCount; i++){
@@ -87,7 +69,6 @@ public class Driver {
 
 			double hcosh = calculator.calculateCosh(x);
 
->>>>>>> Stashed changes
 			double fcosh = Math.cosh(x);
 			
 			if(checkPrecision(hcosh, fcosh)){
@@ -98,9 +79,6 @@ public class Driver {
 		}
 		System.out.println("Cosh function with a precision of 10^-10 has passed the test: " + coshtest);
 
-<<<<<<< Updated upstream
-	}
-=======
 		//System.out.println(calculator.Power(2, 3));
 		//System.out.println(calculator.Fact(4));
 		System.out.println("Test sin(-15) = " + calculator.calculateSine(-15));
@@ -130,7 +108,6 @@ public class Driver {
 	 * @param fcosh
 	 * @return dif>prec
 	 */
->>>>>>> Stashed changes
 	public static Boolean checkPrecision(double hcosh, double fcosh){
 		double prec = 10E-10;
 		double dif = hcosh - fcosh;
@@ -139,13 +116,6 @@ public class Driver {
 		return (dif > prec);
 	}
 	
-<<<<<<< Updated upstream
-		System.out.println("\n4^(1/2) = " + calculator.sqrt(4));
-		System.out.println("1005^(1/2) = " + calculator.sqrt(1005));
-		System.out.println("(5)^(1/2) = " + calculator.sqrt(55));
-		System.out.println("0.01^(1/2) = " + calculator.sqrt(0.01));
-		//System.out.println("(-2)^(1/2) = " + calculator.sqrt(-2)); // Negative value not accepted, throws an exception
-=======
 	/**
 	 * Checks square root compared to inbuilt square-root
 	 * @param c
@@ -163,7 +133,4 @@ public class Driver {
             return true;
         return false;
     }
-
->>>>>>> Stashed changes
-
 }
