@@ -28,7 +28,7 @@ public class Token {
 		if (state == 19) { type = "Error";}
 		if (state == 21) { type = "id";}
 		
-		System.out.print("--" + type + "--");
+		//System.out.print("--" + type + "--");
 		
 	}
 	
