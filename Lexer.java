@@ -1,3 +1,4 @@
+
 /*
  * Lexer
  * 
@@ -557,10 +558,5 @@ public class Lexer {
 		return tokens;
 		
 	}
-	
-	
-	
-	
-	
-
 }
+

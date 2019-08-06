@@ -33,6 +33,7 @@ public class Calculator {
 	 * @return result
 	 */
 	public static float calculateExponent(int n, float x){
+
 			
 		float result = 1;
 		
@@ -43,12 +44,14 @@ public class Calculator {
 		return result;
 	}
 
+
 	/**
 	 * 10^x	
 	 * @param n
 	 * @return result
 	 */
 	public static float calculateTenPower(float n){
+
 
 		float result = 1;
 
@@ -123,24 +126,30 @@ public class Calculator {
 
 	
 
+
 	/**
 	 * cosh(x)
 	 * @param x
 	 * @return total
 	 */
 	public static double calculateCosh(double x){
+
 		//Known integer value of cosh
 
 		if (x == 0){
 			return 1;
 		}	
+		//Taylor series ((x^2n)/(2n)!) summation from n = 0 to 149 
+		//n = 0
 		double total = 1;
+		//n = 1 to 149 
 		for(int i = 1; i < 150; i++){
 			total = total + calculatePower(x, (2 * i)) / calculateFactorial((2 * i));
 		}
 		return total;
 	}
 	
+
 	/**
 	 * Square root of x (x^(1/2))
 	 * @param number
@@ -148,6 +157,7 @@ public class Calculator {
 	 */
 	
 	public static double calculateSquareRoot(double number) {
+
 		if (number<0){ // Check that value is nonnegative
 			throw new IllegalArgumentException("Number must be greater than zero."); // TODO handle better
 		}
@@ -168,6 +178,7 @@ public class Calculator {
 		return squareRoot;
 	}
 		
+
 	/**
 	 * Sin(x) using rads
 	 * @param inp
@@ -175,16 +186,19 @@ public class Calculator {
 	 */
 	public static double calculateSine(double inp){
 
+
 		double inpMod = inp % (2.0*PICONST);
 		double result = inpMod;
 
 		for(int j = 3; j < 150; j+=4){
+
 			result -= (calculatePower(inpMod, j) / calculateFactorial(j));
 			result += (calculatePower(inpMod, j+2) / calculateFactorial(j+2));
 		}
 
 		return result;
 	}
+
 //-------------- SECONDARY FUNCTIONS ----------------
 	
 	/**
@@ -205,6 +219,7 @@ public class Calculator {
 		}
 	}
 
+
 	/**
 	 * Power with positive integer exponent 
 	 * @param base
@@ -218,6 +233,7 @@ public class Calculator {
 		return base * calculatePower(base, expo-1);
 	}
 	
+
 	/**
 	 * N root
 	 * @param base
@@ -225,6 +241,7 @@ public class Calculator {
 	 * @return x
 	 */
 	private static double findNthRoot(double base, int expo) {
+
 		double x = 1;
 		boolean accurate = false;
 
@@ -237,6 +254,7 @@ public class Calculator {
 		return x;
 	}
 
+
 	/**
 	 * Accuracy for n root
 	 * @param x
@@ -244,6 +262,7 @@ public class Calculator {
 	 * @return boolean result
 	 */
 	private static boolean isAccurate(double x, double y) {
+
 		double result = y - x;
 
 		if (result < 0)
@@ -251,41 +270,6 @@ public class Calculator {
 
 		return result < 0.000001;
 	}
-
-	// Square root (x^(1/2))
-	
-	public double sqrt(double number) {
-		if (number<0){ // Check that value is nonnegative
-			throw new IllegalArgumentException("Number must be greater than zero."); // TODO handle better
-		}
-		if (number == 0){ // If passed number is 0, return value 0
-			return number;
-		}
-		
-		double t;
-	 
-		double squareRoot = number;
-	 
-		// Do guesses using Newthon's method until t is equal to squareRoot
-		do {
-			t = squareRoot;
-			squareRoot = ((number / t + t)) / 2;
-		} while ((t - squareRoot) != 0); 
-	 
-		return squareRoot;
-	}
-
-	//getting pi somewhat accurate took a very long time
-    /*
-    public static double getPi(){
-        double result = 0.0;
-        for(double i = 1; i < 1500000000; i+=4){
-            result += (4.0/i);
-            result -= (4.0/(i+2.0));
-        }
-        return result;
-    }
-    */
 
 	/**
 	 * Deg to rad

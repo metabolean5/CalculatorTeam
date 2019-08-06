@@ -1,3 +1,4 @@
+
 /*
  * ExpressionParser
  * 
@@ -20,14 +21,12 @@ import java.util.ArrayList;
  *
  */
 
+
+
 public class ExpressionParser {
 
 	
-	/**
-	 * Calculate
-	 * @param expr
-	 * @return float
-	 */
+	
 	public static float calculate(String expr) {
 		
 		if(expr.equals("exit")) {
@@ -45,7 +44,8 @@ public class ExpressionParser {
 		
 		
 		//syntax analysis
-		System.out.print("\n\nSYNTAX ANALYSIS");
+		
+		//System.out.print("\n\nSYNTAX ANALYSIS");
 		Parser parser = new Parser(tokenStream);
 		Node ast = parser.run_Parser();
 		
@@ -53,10 +53,6 @@ public class ExpressionParser {
 		Visitor visitor = new Visitor(ast);
 		
 		return  visitor.calculate();
-		
 	}
-	
-	
-	
-	
 }
+

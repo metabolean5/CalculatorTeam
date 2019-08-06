@@ -3,6 +3,15 @@
 /.project
 /Calculator.class
 /CalculatorTeam.iml
+/ConsoleApplication.class
 /Driver.class
 /README.md
+/Test.class
 /out/
+/Visitor.class
+/Lexer.class
+/Node.class
+/Parser.class
+/Token.class
+/ExpressionParser.class
+/dotcode.txt
