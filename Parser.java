@@ -254,7 +254,7 @@ public class Parser {
 	 */
 	public void showParseStack() {
 		
-		System.out.print("\nParse Stack:");
+		//System.out.print("\nParse Stack:");
 		
 		ArrayList<String> stackTemp = new ArrayList<String>();;
 		
@@ -268,7 +268,7 @@ public class Parser {
 	
 		for (int j = stackTemp.size() - 1; j >= 0; j--) {
 			
-			System.out.print("\t" + stackTemp.get(j));
+			//System.out.print("\t" + stackTemp.get(j));
 			parseStack.push(stackTemp.get(j));
 			
 	    	}
@@ -279,7 +279,7 @@ public class Parser {
 	 */
 	public void showSEMStack() {
 			
-			System.out.print("\nSemantic Stack:");
+			//System.out.print("\nSemantic Stack:");
 			
 			ArrayList<Node> stackTemp = new ArrayList<Node>();;
 			
@@ -292,7 +292,7 @@ public class Parser {
 		
 			for (int j = stackTemp.size() - 1; j >= 0; j--) {
 				
-				System.out.print("\t" + stackTemp.get(j));
+				//System.out.print("\t" + stackTemp.get(j));
 				semanticStack.push(stackTemp.get(j));
 				
 		    	}
@@ -336,15 +336,15 @@ public class Parser {
 			x = parseStack.peek(); // reset x if semantic action went through
 			
 			showParseStack();
-			System.out.print("\na is -" + a.getLexeme() + "-");
-			System.out.print("\nx is -" + x + "-");
+			//System.out.print("\na is -" + a.getLexeme() + "-");
+			//System.out.print("\nx is -" + x + "-");
 			
 			if (isTerminal(x)) {
 				
 				if (x.equals(a.getType())){
 					
 					parseStack.pop();
-					System.out.print("\nConsumed " + a.getLexeme());
+					//System.out.print("\nConsumed " + a.getLexeme());
 					if(parseStack.peek() != "$" && wordPosition < words.size() -1 ){ a = nextWord();}
 						
 				}else {
@@ -388,7 +388,7 @@ public class Parser {
 		}
 		
 		checkParseStackError();
-		System.out.print("\n\nsuccessfully parsed");
+		//System.out.print("\n\nsuccessfully parsed");
 		
 		traverse(semanticStack.peek());
 		return semanticStack.peek();
@@ -425,13 +425,13 @@ public class Parser {
 			
 			FileWriter fw = new FileWriter("dotcode.txt", true);
 		
-			System.out.print("\n\nParent : " + root + " has children ");
+			//System.out.print("\n\nParent : " + root + " has children ");
 			fw.write(root.getID() + "[label = \" " + root.getLexeme() + "(" + root.getType()+ ") \" ] \n ");
 			
 			
 			for (Node child: root.getChildren()) {
 				fw.write(root.getID() + "--" + child.getID() + " \n");
-				System.out.print("\t" + child);	
+				//System.out.print("\t" + child);	
 				}
 			
 			fw.close();

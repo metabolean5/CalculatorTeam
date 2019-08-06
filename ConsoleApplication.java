@@ -39,8 +39,8 @@ public class ConsoleApplication {
 		while(!exit) {
 
 			System.out.println("POSSIBLE FUNCTIONS: \n\n -exp(x) \t -cosh(x) \n\n -sqrt(x)\t -sin(x) \n\n -pow(x)\t -+ - * / ()\n\n " );
-
-			System.out.println("Enter Calculations (type 'exit' to end): " );
+			System.out.println("HOW TO USE: Maximum two expression per operation. () + () - () will not work, () + (() - ()) will \n\n");
+			System.out.println("Enter Calculations (type 'exit' to end): " ); 
 		
 			String str= scan.nextLine();
 			

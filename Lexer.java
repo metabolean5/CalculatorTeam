@@ -481,7 +481,7 @@ public class Lexer {
 		currState = 0;
 		
 		
-		System.out.print("\n-->ROOT");
+		//System.out.print("\n-->ROOT");
 		
 		boolean tokenFound =  false;
 		while(!tokenFound) {
@@ -490,13 +490,13 @@ public class Lexer {
 			String next = nextChar();
 			String nextCharKey = setKey(next);
 			
-			System.out.print("(" + nextCharKey + ")" );
+			//System.out.print("(" + nextCharKey + ")" );
 			
 			
-			if (next.equals("~")) { System.out.print(token.getLexeme()+ "<1>");tokenFound = true; EOF = true;break;}
+			if (next.equals("~")) { /*System.out.print(token.getLexeme()+ "<1>")*/;tokenFound = true; EOF = true;break;}
 			
 			currState = fsmTable.get(currState).get(nextCharKey); //Transition to next state
-			System.out.print("-->" + currState );
+			/*System.out.print("-->" + currState );*/
 			
 			if (fsmTable.get(currState).get("final") == 1) { // if state is final state
 				
@@ -536,11 +536,11 @@ public class Lexer {
 	public void printTokenStream() {
 		
 		
-		System.out.print("\n\nTOKEN STREAM:");
+		/*System.out.print("\n\nTOKEN STREAM:");*/
 		
 		for(Token token : tokens) {
 			
-			System.out.print("\n" + token.getLexeme());
+			/*System.out.print("\n" + token.getLexeme());*/
 			
 			
 		}
